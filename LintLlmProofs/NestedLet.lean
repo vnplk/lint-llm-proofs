@@ -3,7 +3,7 @@ Copyright (c) 2026 Jesse Alama. All rights reserved.
 Released under MIT license as described in the file LICENSE.
 Authors: Jesse Alama
 -/
-import Lean.Elab.Command
+import Lean.Linter.Basic
 import Lean.Meta.Hint
 
 /-!
@@ -113,7 +113,7 @@ def nestedLetLinter : Linter where run := withSetOptionIn fun stx => do
     -- Note: Full rewrite is complex; we show the inner let that should be hoisted
     let innerStr := innerLet.reprint.getD (toString innerLet.prettyPrint)
     let suggestion : Meta.Hint.Suggestion := {
-      suggestion := innerStr.trim
+      suggestion := innerStr.trimAscii.toString
       span? := some innerLet  -- Replace the inner let with itself (as a hint)
     }
     let hintMsg := if hasDepend then

@@ -89,7 +89,9 @@ example (a : Nat) : a + 0 = a := by
 
 -- Should NOT trigger: simp at hypothesis, not goal
 /--
-warning: unused variable `h`
+warning: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
 -/

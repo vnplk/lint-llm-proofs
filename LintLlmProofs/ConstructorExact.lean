@@ -3,7 +3,7 @@ Copyright (c) 2026 Jesse Alama. All rights reserved.
 Released under MIT license as described in the file LICENSE.
 Authors: Jesse Alama
 -/
-import Lean.Elab.Command
+import Lean.Linter.Basic
 import Lean.Meta.Hint
 
 /-!

@@ -9,20 +9,22 @@ Lean 4 linters for detecting patterns typical of LLM-generated proofs, with auto
 - All linters disabled by default for opt-in usage
 - Configurable per-file, per-section, or project-wide
 
+This fork targets Lean **v4.32.1**.
+
 ## Installation
 
 Add to your `lakefile.toml`:
 ```toml
 [[require]]
 name = "lintLlmProofs"
-git = "https://github.com/jessealama/lint-llm-proofs"
+git = "https://github.com/vnplk/lint-llm-proofs"
 rev = "main"
 ```
 
 Or if using `lakefile.lean`:
 ```lean
 require lintLlmProofs from git
-  "https://github.com/jessealama/lint-llm-proofs" @ "main"
+  "https://github.com/vnplk/lint-llm-proofs" @ "main"
 ```
 
 Then run `lake update`.
